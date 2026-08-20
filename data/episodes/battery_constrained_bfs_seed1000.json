@@ -1,0 +1,2869 @@
+{
+ "controller": "bfs",
+ "scenario": "battery_constrained",
+ "seed": 1000,
+ "layout": {
+  "height": 15,
+  "width": 21,
+  "grid": [
+   [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    3,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    2,
+    2,
+    2,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    0,
+    3,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1
+   ],
+   [
+    1,
+    5,
+    0,
+    0,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    0,
+    0,
+    5,
+    1
+   ],
+   [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ]
+  ],
+  "legend": {
+   "empty": 0,
+   "wall": 1,
+   "shelf": 2,
+   "storage": 3,
+   "packing": 4,
+   "charging": 5
+  },
+  "storage_points": [
+   [
+    2,
+    3
+   ],
+   [
+    2,
+    7
+   ],
+   [
+    2,
+    11
+   ],
+   [
+    2,
+    15
+   ],
+   [
+    5,
+    3
+   ],
+   [
+    5,
+    5
+   ],
+   [
+    5,
+    7
+   ],
+   [
+    5,
+    9
+   ],
+   [
+    5,
+    11
+   ],
+   [
+    5,
+    13
+   ],
+   [
+    5,
+    15
+   ],
+   [
+    5,
+    17
+   ],
+   [
+    8,
+    3
+   ],
+   [
+    8,
+    5
+   ],
+   [
+    8,
+    7
+   ],
+   [
+    8,
+    9
+   ],
+   [
+    8,
+    11
+   ],
+   [
+    8,
+    13
+   ],
+   [
+    8,
+    15
+   ],
+   [
+    8,
+    17
+   ],
+   [
+    11,
+    5
+   ],
+   [
+    11,
+    9
+   ],
+   [
+    11,
+    13
+   ],
+   [
+    11,
+    17
+   ]
+  ],
+  "packing_stations": [
+   [
+    13,
+    4
+   ],
+   [
+    13,
+    16
+   ]
+  ],
+  "charging_stations": [
+   [
+    13,
+    1
+   ],
+   [
+    13,
+    19
+   ]
+  ]
+ },
+ "frames": [
+  {
+   "step": 0,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     1
+    ],
+    "battery": 45.0,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 0.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     3
+    ],
+    "created_step": 0,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 10,
+   "events": [
+    "start"
+   ]
+  },
+  {
+   "step": 1,
+   "robot": {
+    "id": 0,
+    "position": [
+     12,
+     1
+    ],
+    "battery": 43.5,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 1.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     3
+    ],
+    "created_step": 0,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 9,
+   "events": []
+  },
+  {
+   "step": 2,
+   "robot": {
+    "id": 0,
+    "position": [
+     11,
+     1
+    ],
+    "battery": 42.0,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 3.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     3
+    ],
+    "created_step": 0,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 8,
+   "events": []
+  },
+  {
+   "step": 3,
+   "robot": {
+    "id": 0,
+    "position": [
+     10,
+     1
+    ],
+    "battery": 40.5,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 4.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     3
+    ],
+    "created_step": 0,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 7,
+   "events": []
+  },
+  {
+   "step": 4,
+   "robot": {
+    "id": 0,
+    "position": [
+     9,
+     1
+    ],
+    "battery": 39.0,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 6.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     3
+    ],
+    "created_step": 0,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 6,
+   "events": []
+  },
+  {
+   "step": 5,
+   "robot": {
+    "id": 0,
+    "position": [
+     8,
+     1
+    ],
+    "battery": 37.5,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 7.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     3
+    ],
+    "created_step": 0,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 5,
+   "events": []
+  },
+  {
+   "step": 6,
+   "robot": {
+    "id": 0,
+    "position": [
+     7,
+     1
+    ],
+    "battery": 36.0,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 9.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     3
+    ],
+    "created_step": 0,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 4,
+   "events": []
+  },
+  {
+   "step": 7,
+   "robot": {
+    "id": 0,
+    "position": [
+     6,
+     1
+    ],
+    "battery": 34.5,
+    "battery_state": "low",
+    "carrying": false,
+    "energy_consumed": 10.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     3
+    ],
+    "created_step": 0,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 3,
+   "events": []
+  },
+  {
+   "step": 8,
+   "robot": {
+    "id": 0,
+    "position": [
+     5,
+     1
+    ],
+    "battery": 33.0,
+    "battery_state": "low",
+    "carrying": false,
+    "energy_consumed": 12.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     3
+    ],
+    "created_step": 0,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 2,
+   "events": []
+  },
+  {
+   "step": 9,
+   "robot": {
+    "id": 0,
+    "position": [
+     5,
+     2
+    ],
+    "battery": 31.5,
+    "battery_state": "low",
+    "carrying": false,
+    "energy_consumed": 13.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     3
+    ],
+    "created_step": 0,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 1,
+   "events": []
+  },
+  {
+   "step": 10,
+   "robot": {
+    "id": 0,
+    "position": [
+     5,
+     3
+    ],
+    "battery": 30.0,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 15.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 21,
+   "events": [
+    "pickup"
+   ]
+  },
+  {
+   "step": 11,
+   "robot": {
+    "id": 0,
+    "position": [
+     5,
+     2
+    ],
+    "battery": 28.5,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 16.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 22,
+   "events": []
+  },
+  {
+   "step": 12,
+   "robot": {
+    "id": 0,
+    "position": [
+     6,
+     2
+    ],
+    "battery": 27.0,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 18.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 21,
+   "events": []
+  },
+  {
+   "step": 13,
+   "robot": {
+    "id": 0,
+    "position": [
+     7,
+     2
+    ],
+    "battery": 25.5,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 19.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 20,
+   "events": []
+  },
+  {
+   "step": 14,
+   "robot": {
+    "id": 0,
+    "position": [
+     8,
+     2
+    ],
+    "battery": 24.0,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 21.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 19,
+   "events": []
+  },
+  {
+   "step": 15,
+   "robot": {
+    "id": 0,
+    "position": [
+     9,
+     2
+    ],
+    "battery": 22.5,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 22.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 18,
+   "events": []
+  },
+  {
+   "step": 16,
+   "robot": {
+    "id": 0,
+    "position": [
+     10,
+     2
+    ],
+    "battery": 21.0,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 24.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 17,
+   "events": []
+  },
+  {
+   "step": 17,
+   "robot": {
+    "id": 0,
+    "position": [
+     11,
+     2
+    ],
+    "battery": 19.5,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 25.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 16,
+   "events": []
+  },
+  {
+   "step": 18,
+   "robot": {
+    "id": 0,
+    "position": [
+     12,
+     2
+    ],
+    "battery": 18.0,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 27.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 15,
+   "events": []
+  },
+  {
+   "step": 19,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     2
+    ],
+    "battery": 16.5,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 28.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 14,
+   "events": []
+  },
+  {
+   "step": 20,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     1
+    ],
+    "battery": 25.0,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 30.0
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 15,
+   "events": [
+    "charging"
+   ]
+  },
+  {
+   "step": 21,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     1
+    ],
+    "battery": 34.9,
+    "battery_state": "low",
+    "carrying": true,
+    "energy_consumed": 30.1
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 15,
+   "events": [
+    "charging"
+   ]
+  },
+  {
+   "step": 22,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     1
+    ],
+    "battery": 44.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 30.2
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 15,
+   "events": [
+    "charging"
+   ]
+  },
+  {
+   "step": 23,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     1
+    ],
+    "battery": 54.7,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 30.3
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 15,
+   "events": [
+    "charging"
+   ]
+  },
+  {
+   "step": 24,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     1
+    ],
+    "battery": 64.6,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 30.4
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 15,
+   "events": [
+    "charging"
+   ]
+  },
+  {
+   "step": 25,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     1
+    ],
+    "battery": 74.5,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 30.5
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 15,
+   "events": [
+    "charging"
+   ]
+  },
+  {
+   "step": 26,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     1
+    ],
+    "battery": 84.4,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 30.6
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 15,
+   "events": [
+    "charging"
+   ]
+  },
+  {
+   "step": 27,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     1
+    ],
+    "battery": 94.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 30.7
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 15,
+   "events": [
+    "charging"
+   ]
+  },
+  {
+   "step": 28,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     2
+    ],
+    "battery": 92.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 32.2
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 14,
+   "events": []
+  },
+  {
+   "step": 29,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     3
+    ],
+    "battery": 91.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 33.7
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 13,
+   "events": []
+  },
+  {
+   "step": 30,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     4
+    ],
+    "battery": 89.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 35.2
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 12,
+   "events": []
+  },
+  {
+   "step": 31,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     5
+    ],
+    "battery": 88.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 36.7
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 11,
+   "events": []
+  },
+  {
+   "step": 32,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     6
+    ],
+    "battery": 86.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 38.2
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 10,
+   "events": []
+  },
+  {
+   "step": 33,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     7
+    ],
+    "battery": 85.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 39.7
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 9,
+   "events": []
+  },
+  {
+   "step": 34,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     8
+    ],
+    "battery": 83.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 41.2
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 8,
+   "events": []
+  },
+  {
+   "step": 35,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     9
+    ],
+    "battery": 82.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 42.7
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 7,
+   "events": []
+  },
+  {
+   "step": 36,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     10
+    ],
+    "battery": 80.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 44.2
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 6,
+   "events": []
+  },
+  {
+   "step": 37,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     11
+    ],
+    "battery": 79.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 45.7
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 5,
+   "events": []
+  },
+  {
+   "step": 38,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     12
+    ],
+    "battery": 77.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 47.2
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 4,
+   "events": []
+  },
+  {
+   "step": 39,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     13
+    ],
+    "battery": 76.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 48.7
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 3,
+   "events": []
+  },
+  {
+   "step": 40,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     14
+    ],
+    "battery": 74.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 50.2
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 2,
+   "events": []
+  },
+  {
+   "step": 41,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     15
+    ],
+    "battery": 73.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 51.7
+   },
+   "task": {
+    "id": 0,
+    "pickup": [
+     5,
+     3
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 0,
+    "picked_step": 9,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 1,
+   "events": []
+  },
+  {
+   "step": 42,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     16
+    ],
+    "battery": 71.8,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 53.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 11,
+   "events": [
+    "delivery",
+    "new_task"
+   ]
+  },
+  {
+   "step": 43,
+   "robot": {
+    "id": 0,
+    "position": [
+     12,
+     16
+    ],
+    "battery": 70.3,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 54.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 10,
+   "events": []
+  },
+  {
+   "step": 44,
+   "robot": {
+    "id": 0,
+    "position": [
+     11,
+     16
+    ],
+    "battery": 68.8,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 56.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 9,
+   "events": []
+  },
+  {
+   "step": 45,
+   "robot": {
+    "id": 0,
+    "position": [
+     11,
+     17
+    ],
+    "battery": 67.3,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 57.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 8,
+   "events": []
+  },
+  {
+   "step": 46,
+   "robot": {
+    "id": 0,
+    "position": [
+     11,
+     18
+    ],
+    "battery": 65.8,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 59.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 7,
+   "events": []
+  },
+  {
+   "step": 47,
+   "robot": {
+    "id": 0,
+    "position": [
+     10,
+     18
+    ],
+    "battery": 64.3,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 60.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 6,
+   "events": []
+  },
+  {
+   "step": 48,
+   "robot": {
+    "id": 0,
+    "position": [
+     9,
+     18
+    ],
+    "battery": 62.8,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 62.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 5,
+   "events": []
+  },
+  {
+   "step": 49,
+   "robot": {
+    "id": 0,
+    "position": [
+     8,
+     18
+    ],
+    "battery": 61.3,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 63.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 4,
+   "events": []
+  },
+  {
+   "step": 50,
+   "robot": {
+    "id": 0,
+    "position": [
+     7,
+     18
+    ],
+    "battery": 59.8,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 65.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 3,
+   "events": []
+  },
+  {
+   "step": 51,
+   "robot": {
+    "id": 0,
+    "position": [
+     6,
+     18
+    ],
+    "battery": 58.3,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 66.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 2,
+   "events": []
+  },
+  {
+   "step": 52,
+   "robot": {
+    "id": 0,
+    "position": [
+     5,
+     18
+    ],
+    "battery": 56.8,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 68.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "pending",
+    "target": [
+     5,
+     17
+    ],
+    "created_step": 41,
+    "picked_step": null,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 1,
+   "events": []
+  },
+  {
+   "step": 53,
+   "robot": {
+    "id": 0,
+    "position": [
+     5,
+     17
+    ],
+    "battery": 55.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 69.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 11,
+   "events": [
+    "pickup"
+   ]
+  },
+  {
+   "step": 54,
+   "robot": {
+    "id": 0,
+    "position": [
+     5,
+     18
+    ],
+    "battery": 53.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 71.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 10,
+   "events": []
+  },
+  {
+   "step": 55,
+   "robot": {
+    "id": 0,
+    "position": [
+     6,
+     18
+    ],
+    "battery": 52.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 72.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 9,
+   "events": []
+  },
+  {
+   "step": 56,
+   "robot": {
+    "id": 0,
+    "position": [
+     7,
+     18
+    ],
+    "battery": 50.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 74.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 8,
+   "events": []
+  },
+  {
+   "step": 57,
+   "robot": {
+    "id": 0,
+    "position": [
+     8,
+     18
+    ],
+    "battery": 49.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 75.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 7,
+   "events": []
+  },
+  {
+   "step": 58,
+   "robot": {
+    "id": 0,
+    "position": [
+     9,
+     18
+    ],
+    "battery": 47.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 77.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 6,
+   "events": []
+  },
+  {
+   "step": 59,
+   "robot": {
+    "id": 0,
+    "position": [
+     10,
+     18
+    ],
+    "battery": 46.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 78.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 5,
+   "events": []
+  },
+  {
+   "step": 60,
+   "robot": {
+    "id": 0,
+    "position": [
+     11,
+     18
+    ],
+    "battery": 44.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 80.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 4,
+   "events": []
+  },
+  {
+   "step": 61,
+   "robot": {
+    "id": 0,
+    "position": [
+     12,
+     18
+    ],
+    "battery": 43.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 81.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 3,
+   "events": []
+  },
+  {
+   "step": 62,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     18
+    ],
+    "battery": 41.8,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 83.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 2,
+   "events": []
+  },
+  {
+   "step": 63,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     17
+    ],
+    "battery": 40.3,
+    "battery_state": "ok",
+    "carrying": true,
+    "energy_consumed": 84.7
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "picked_up",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": null
+   },
+   "obstacles": [],
+   "distance_to_target": 1,
+   "events": []
+  },
+  {
+   "step": 64,
+   "robot": {
+    "id": 0,
+    "position": [
+     13,
+     16
+    ],
+    "battery": 38.8,
+    "battery_state": "ok",
+    "carrying": false,
+    "energy_consumed": 86.2
+   },
+   "task": {
+    "id": 1,
+    "pickup": [
+     5,
+     17
+    ],
+    "dropoff": [
+     13,
+     16
+    ],
+    "status": "delivered",
+    "target": [
+     13,
+     16
+    ],
+    "created_step": 41,
+    "picked_step": 52,
+    "delivered_step": 63
+   },
+   "obstacles": [],
+   "distance_to_target": 0,
+   "events": [
+    "delivery"
+   ]
+  }
+ ],
+ "summary": {
+  "controller": "bfs",
+  "scenario": "battery_constrained",
+  "seed": 1000,
+  "steps": 64,
+  "moves": 57,
+  "collisions": 0,
+  "static_collisions": 0,
+  "dynamic_collisions": 0,
+  "idle_steps": 7,
+  "energy_consumed": 86.2,
+  "charging_events": 8,
+  "tasks_delivered": 2,
+  "tasks_failed": 0,
+  "optimal_path_length": 53,
+  "termination_reason": "all_tasks_delivered",
+  "total_reward": 94.376
+ }
+}
