@@ -49,6 +49,7 @@ class WarehouseEnv(gym.Env):
         self,
         config: ScenarioConfig | str | Path | None = None,
         render_mode: str | None = None,
+        layout=None,
     ) -> None:
         super().__init__()
         if config is None:
@@ -58,7 +59,11 @@ class WarehouseEnv(gym.Env):
         self.config = config
         self.render_mode = render_mode
 
-        self.sim = WarehouseSimulation(config)
+        # ``layout``, when given, overrides the layout the config would
+        # otherwise generate - this is how a user-drawn warehouse from the
+        # dashboard editor is simulated with the same physics and reward as
+        # every procedurally generated scenario.
+        self.sim = WarehouseSimulation(config, layout=layout)
         self.window = int(config.observation_window)
         if self.window < 1 or self.window % 2 == 0:
             raise ValueError("observation_window must be a positive odd number")

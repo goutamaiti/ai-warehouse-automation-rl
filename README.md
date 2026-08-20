@@ -23,8 +23,8 @@ in Python plus a React dashboard.
 | A* / BFS planners + battery-aware controller | Implemented, unit tested |
 | PPO training pipeline (Stable-Baselines3) | Implemented, **run** - three policies trained and committed |
 | Evaluation, metrics, reports | Implemented, results in `data/results/` |
-| FastAPI backend | Implemented, tested |
-| React dashboard | Implemented, replays real recordings |
+| FastAPI backend | Implemented, tested, accepts a user-drawn custom layout |
+| React dashboard (Dashboard / Editor / Info tabs) | Implemented, replays real recordings, live per-step reward breakdown |
 | Battery-aware RL | **Trained but does not work yet** - PPO scores 0/30 on `battery_constrained`; reported honestly below |
 | Multi-robot / MARL | **Not implemented** - future scope |
 | Reward-weight ablation study | **Not run yet** - the weights in `configs/` are reasoned starting values, not tuned results |
@@ -127,6 +127,12 @@ Open the dashboard:
 npm install --prefix frontend
 npm run dev --prefix frontend
 ```
+
+The dashboard has three tabs:
+
+- **Dashboard** — replays the recorded episodes and result tables above; this is where every reported number lives, including a live, per-step reward breakdown (every term the reward function can pay or charge, and which ones fired on the current step).
+- **Editor** — paint a warehouse by hand (walls, shelves, storage points, packing and charging stations), pick a ruleset (default / dynamic obstacles / battery-constrained) and a controller (PPO, A*, BFS, Random), and run it. With a connected backend this runs the real Python simulation (`uvicorn backend.main:app --reload`, see [docs/deployment.md](docs/deployment.md)), including PPO and moving obstacles. Without one, A*, BFS and Random run in an in-browser sandbox for exploration — its numbers are never part of the reported results, only the Python pipeline's are.
+- **Info** — an in-app explanation of the MDP, the reward function, the algorithms, the two reward-shaping bugs found and fixed, and the measured results, so the project is explainable from the deployed site alone.
 
 ---
 

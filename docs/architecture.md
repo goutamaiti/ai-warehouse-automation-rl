@@ -39,8 +39,9 @@ random) without touching the world, and to run training with rendering off.
 | PPO training / evaluation | `rl_agent/` | Stable-Baselines3 |
 | Episode loop, metrics, reports | `analytics/` | One loop shared by every controller |
 | Text and JSON rendering | `simulation/renderer.py` | Read-only consumer of the state |
-| HTTP API | `backend/` | Thin layer over `backend/services` |
-| Dashboard | `frontend/` | Replays recorded JSON, no simulation logic |
+| HTTP API | `backend/` | Thin layer over `backend/services`; `POST /api/run` accepts an optional user-drawn `layout` grid (see `simulation.warehouse.layout_from_grid`) |
+| Dashboard | `frontend/` | Three tabs: Dashboard (replays recorded JSON), Editor (paints a layout, runs it), Info (in-app explanation) |
+| Offline sandbox | `frontend/src/lib/offlineSimulation.js` | Independent JS port of the engine + reward, used by the Editor's A*/BFS/Random controllers when no backend is connected. Not a source of reported results - see `docs/experiments.md` |
 
 ### Two deviations from the structure in the project memo
 

@@ -383,3 +383,332 @@ thead th {
   color: var(--muted);
   font-size: 0.82rem;
 }
+
+/* ---------------------------------------------------------------- */
+/* Tab navigation                                                    */
+/* ---------------------------------------------------------------- */
+
+.tab-bar {
+  display: flex;
+  gap: 4px;
+  margin-top: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-button {
+  background: transparent;
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  padding: 8px 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  color: var(--text);
+}
+
+.tab-button.active {
+  color: var(--text);
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+/* ---------------------------------------------------------------- */
+/* Warehouse editor                                                  */
+/* ---------------------------------------------------------------- */
+
+.editor-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.template-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.warehouse-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.editor-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.palette-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+}
+
+.palette-button .swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--swatch);
+  display: inline-block;
+}
+
+.palette-button.selected {
+  border-color: var(--accent);
+  background: var(--surface-2);
+  box-shadow: 0 0 0 1px var(--accent) inset;
+}
+
+.editor-dims {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.editor-dims input[type='number'] {
+  width: 72px;
+}
+
+.warehouse-editor canvas {
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.validation-status {
+  margin: 8px 0 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+}
+
+.validation-status.ok {
+  color: var(--ok);
+  border-color: rgba(52, 211, 153, 0.35);
+  background: rgba(52, 211, 153, 0.07);
+}
+
+.validation-status.fail {
+  color: var(--danger);
+  border-color: rgba(244, 63, 94, 0.35);
+  background: rgba(244, 63, 94, 0.07);
+}
+
+.run-panel .live-controls {
+  margin-top: 4px;
+}
+
+.editor-results {
+  align-items: start;
+  margin-top: 16px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Reward panel                                                      */
+/* ---------------------------------------------------------------- */
+
+.reward-panel {
+  margin-top: 16px;
+}
+
+.reward-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.reward-panel-header h2 {
+  margin: 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.reward-terms {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.reward-term {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  opacity: 0.65;
+  transition: opacity 0.15s, border-color 0.15s;
+}
+
+.reward-term.active {
+  opacity: 1;
+  border-color: var(--accent);
+}
+
+.reward-term-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.reward-term-label {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.reward-term-sign {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.reward-term-value {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.reward-term.tone-reward.active .reward-term-value { color: var(--ok); }
+.reward-term.tone-penalty.active .reward-term-value { color: var(--danger); }
+.reward-term.tone-shaping.active .reward-term-value { color: var(--accent); }
+
+.reward-term-rule {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.reward-term-why {
+  margin: 4px 0 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+.reward-totals {
+  display: flex;
+  gap: 24px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.reward-totals dt {
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.reward-totals dd {
+  margin: 2px 0 0;
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- */
+/* Info page                                                         */
+/* ---------------------------------------------------------------- */
+
+.info-page {
+  margin-top: 16px;
+  max-width: 920px;
+}
+
+.info-hero h1 {
+  margin: 0 0 4px;
+  font-size: 1.6rem;
+}
+
+.info-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-top: 16px;
+}
+
+.info-section h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.info-section h3 {
+  margin: 18px 0 8px;
+  font-size: 0.92rem;
+  color: var(--accent);
+}
+
+.info-section p {
+  margin: 8px 0;
+  color: var(--text);
+}
+
+.info-section ol {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.info-section li {
+  margin: 8px 0;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin: 10px 0;
+}
+
+.info-table th,
+.info-table td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.info-table tbody tr th {
+  color: var(--muted);
+  white-space: nowrap;
+  width: 160px;
+}
+
+.reward-table thead th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.info-result-block {
+  margin-top: 20px;
+}
+
+.info-footer {
+  margin: 24px 0 40px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}

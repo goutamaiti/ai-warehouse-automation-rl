@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import IntEnum
+from typing import Sequence
 
 import numpy as np
 
@@ -218,3 +219,59 @@ def validate_layout(layout: WarehouseLayout) -> None:
     unreachable = [p for p in points if p not in connected]
     if unreachable:
         raise ValueError(f"points unreachable from the packing station: {unreachable}")
+
+
+#: Grid dimensions accepted from a user-drawn (not procedurally generated)
+#: layout. The upper bound keeps a single API request cheap to simulate.
+MIN_CUSTOM_SIZE = 5
+MAX_CUSTOM_SIZE = 40
+
+
+def layout_from_grid(grid: Sequence[Sequence[int]]) -> WarehouseLayout:
+    """Build a :class:`WarehouseLayout` from a raw grid of cell-type integers.
+
+    This is the entry point for a user-drawn warehouse (the dashboard's
+    editor): unlike :func:`build_layout`, nothing is generated - every cell
+    value must already be one of :class:`CellType`, and storage/packing/
+    charging points are read directly off the grid instead of being placed by
+    the procedural layout algorithm. The same :func:`validate_layout` used for
+    generated layouts still runs, so a hand-drawn warehouse gets the same
+    connectivity and walkability guarantees as a procedural one.
+    """
+    array = np.asarray(grid, dtype=np.int64)
+    if array.ndim != 2:
+        raise ValueError("grid must be a 2D array of cell-type integers")
+    height, width = array.shape
+    if height < MIN_CUSTOM_SIZE or width < MIN_CUSTOM_SIZE:
+        raise ValueError(f"grid must be at least {MIN_CUSTOM_SIZE}x{MIN_CUSTOM_SIZE}")
+    if height > MAX_CUSTOM_SIZE or width > MAX_CUSTOM_SIZE:
+        raise ValueError(f"grid must be at most {MAX_CUSTOM_SIZE}x{MAX_CUSTOM_SIZE}")
+
+    valid_values = {int(member) for member in CellType}
+    used_values = set(np.unique(array).tolist())
+    unknown = used_values - valid_values
+    if unknown:
+        raise ValueError(f"grid contains unknown cell values: {sorted(unknown)}")
+
+    def points_of(cell_type: CellType) -> tuple[Position, ...]:
+        rows, cols = np.nonzero(array == int(cell_type))
+        return tuple(sorted((int(r), int(c)) for r, c in zip(rows, cols)))
+
+    storage = points_of(CellType.STORAGE)
+    packing = points_of(CellType.PACKING)
+    charging = points_of(CellType.CHARGING)
+    if not storage:
+        raise ValueError("layout needs at least one storage point")
+    if not packing:
+        raise ValueError("layout needs at least one packing station")
+    if not charging:
+        raise ValueError("layout needs at least one charging station")
+
+    layout = WarehouseLayout(
+        grid=array.astype(np.int8),
+        storage_points=storage,
+        packing_stations=packing,
+        charging_stations=charging,
+    )
+    validate_layout(layout)
+    return layout

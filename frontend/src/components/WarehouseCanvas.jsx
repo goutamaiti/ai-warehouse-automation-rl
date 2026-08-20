@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { CellType as CELL, CELL_COLORS } from '../lib/grid';
 
 /**
  * Canvas view of one recorded frame.
@@ -7,26 +8,6 @@ import { useEffect, useRef } from 'react';
  * the recording plus the robot, obstacles and task markers of the current
  * frame. It never simulates anything itself.
  */
-
-const CELL = {
-  EMPTY: 0,
-  WALL: 1,
-  SHELF: 2,
-  STORAGE: 3,
-  PACKING: 4,
-  CHARGING: 5,
-};
-
-// Aisles stay near-black so the things that matter (shelves, stations, robot)
-// carry the contrast.
-const CELL_COLORS = {
-  [CELL.EMPTY]: '#0d1526',
-  [CELL.WALL]: '#04060b',
-  [CELL.SHELF]: '#3a475e',
-  [CELL.STORAGE]: '#1e40af',
-  [CELL.PACKING]: '#15803d',
-  [CELL.CHARGING]: '#b45309',
-};
 
 const COLORS = {
   grid: 'rgba(148, 163, 184, 0.07)',

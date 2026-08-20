@@ -47,11 +47,16 @@ export function loadScenarios() {
   return getJson(`${API_BASE}/api/scenarios`);
 }
 
-/** Ask the backend to run one episode now and return its recording. */
-export function runLiveEpisode({ scenario, controller, seed }) {
+/**
+ * Ask the backend to run one episode now and return its recording.
+ * `layout`, when given, overrides the named scenario's own map with a
+ * user-drawn grid of CellType integers - every other rule (battery, reward,
+ * obstacles, step budget) still comes from `scenario`.
+ */
+export function runLiveEpisode({ scenario, controller, seed, layout }) {
   return getJson(`${API_BASE}/api/run`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ scenario, controller, seed }),
+    body: JSON.stringify({ scenario, controller, seed, layout: layout ?? null }),
   });
 }

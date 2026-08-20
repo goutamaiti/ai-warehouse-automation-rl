@@ -50,7 +50,12 @@ def run_episode(
         observation, reward, terminated, truncated, info = env.step(action)
         total_reward += reward
         if recorder is not None:
-            recorder.capture(env.sim, events=info.get("events", []))
+            recorder.capture(
+                env.sim,
+                events=info.get("events", []),
+                reward=reward,
+                reward_components=info.get("reward_components"),
+            )
 
     metrics = EpisodeMetrics.from_counters(
         env.sim.counters,

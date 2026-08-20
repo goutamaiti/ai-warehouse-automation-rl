@@ -17,6 +17,7 @@ from analytics.runner import run_episode
 from baselines.controller import PlannerPolicy, RandomPolicy
 from environment import make_env
 from simulation.config import ScenarioConfig, load_scenario
+from simulation.warehouse import WarehouseLayout, layout_from_grid
 
 #: Repository root (backend/services/simulation_service.py -> repo root).
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -114,11 +115,21 @@ def _build_policy(controller: str, scenario: str):
     raise ServiceError(f"unknown controller {controller!r}")
 
 
-def run_live_episode(scenario: str, controller: str, seed: int) -> dict[str, Any]:
+def run_live_episode(
+    scenario: str,
+    controller: str,
+    seed: int,
+    layout: list[list[int]] | None = None,
+) -> dict[str, Any]:
     """Run one episode now and return the full replay.
 
-    This is what the dashboard's "Run" button calls. The step budget is capped
-    by the scenario's own ``max_steps``, which is validated here as well.
+    This is what the dashboard's "Run" button calls, for both a named
+    scenario and a user-drawn warehouse from the editor. When ``layout`` is
+    given it overrides the scenario's own generated map; every other rule
+    (battery, reward weights, obstacles, step budget) still comes from
+    ``scenario``, so the numbers stay tied to a real, documented ruleset
+    instead of an arbitrary one invented per request. The step budget is
+    capped by that ruleset's ``max_steps``, validated here as well.
     """
     config = load_scenario_config(scenario)
     if config.max_steps > MAX_LIVE_STEPS:
@@ -126,7 +137,13 @@ def run_live_episode(scenario: str, controller: str, seed: int) -> dict[str, Any
             f"scenario {scenario!r} allows {config.max_steps} steps, "
             f"more than the API limit of {MAX_LIVE_STEPS}"
         )
-    env = make_env(config)
+    custom_layout: WarehouseLayout | None = None
+    if layout is not None:
+        try:
+            custom_layout = layout_from_grid(layout)
+        except ValueError as exc:
+            raise ServiceError(f"invalid layout: {exc}") from exc
+    env = make_env(config, layout=custom_layout)
     policy = _build_policy(controller, scenario)
     _metrics, recorder = run_episode(env, policy, seed=seed, record=True)
     assert recorder is not None

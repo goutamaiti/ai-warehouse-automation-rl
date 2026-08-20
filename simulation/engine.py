@@ -125,11 +125,15 @@ class WarehouseSimulation:
             outcome = sim.step(Action.UP)
     """
 
-    def __init__(self, config: ScenarioConfig) -> None:
+    def __init__(self, config: ScenarioConfig, layout: WarehouseLayout | None = None) -> None:
         self.config = config
-        # The layout is a pure function of the config, so it is built once and
-        # shared by every episode of this scenario.
-        self.layout: WarehouseLayout = build_layout(config.layout)
+        # The layout is a pure function of the config, so it is normally built
+        # once and shared by every episode of this scenario. A caller that
+        # already has a layout (a user-drawn warehouse from the dashboard
+        # editor) passes it directly instead - everything downstream reads
+        # ``self.layout``, never ``config.layout``, so the two paths are
+        # interchangeable.
+        self.layout: WarehouseLayout = layout if layout is not None else build_layout(config.layout)
         self._walkable = self.layout.walkable_mask()
         self.rng = np.random.default_rng(config.seed)
         self.robot: Robot

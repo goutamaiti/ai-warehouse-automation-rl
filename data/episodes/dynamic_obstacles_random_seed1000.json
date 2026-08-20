@@ -479,6 +479,18 @@
    ]
   ]
  },
+ "reward_config": {
+  "step_penalty": 0.05,
+  "progress_weight": 1.0,
+  "shaping_gamma": 1.0,
+  "pickup_reward": 5.0,
+  "delivery_reward": 20.0,
+  "collision_penalty": 1.0,
+  "wait_penalty": 0.1,
+  "energy_weight": 0.02,
+  "battery_depleted_penalty": 10.0,
+  "timeout_penalty": 5.0
+ },
  "frames": [
   {
    "step": 0,
@@ -685,7 +697,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 2,
@@ -789,7 +813,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 3,
@@ -892,7 +928,19 @@
    "distance_to_target": 10,
    "events": [
     "charging"
-   ]
+   ],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 4,
@@ -993,7 +1041,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 5,
@@ -1094,7 +1154,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 6,
@@ -1197,7 +1269,19 @@
    "distance_to_target": 10,
    "events": [
     "charging"
-   ]
+   ],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 7,
@@ -1301,7 +1385,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 8,
@@ -1405,7 +1501,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 9,
@@ -1509,7 +1617,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 10,
@@ -1613,7 +1733,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 11,
@@ -1717,7 +1849,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 12,
@@ -1821,7 +1965,19 @@
    "events": [
     "collision_obstacle",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 13,
@@ -1925,7 +2081,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 14,
@@ -2029,7 +2197,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 15,
@@ -2133,7 +2313,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 16,
@@ -2234,7 +2426,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 17,
@@ -2335,7 +2539,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 18,
@@ -2436,7 +2652,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 19,
@@ -2537,7 +2765,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 20,
@@ -2638,7 +2878,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 21,
@@ -2739,7 +2991,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 22,
@@ -2840,7 +3104,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 23,
@@ -2941,7 +3217,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 24,
@@ -3042,7 +3330,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 25,
@@ -3143,7 +3443,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 26,
@@ -3246,7 +3558,19 @@
    "distance_to_target": 9,
    "events": [
     "collision_obstacle"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 27,
@@ -3349,7 +3673,19 @@
    "distance_to_target": 9,
    "events": [
     "collision_obstacle"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 28,
@@ -3450,7 +3786,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 29,
@@ -3551,7 +3899,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 30,
@@ -3652,7 +4012,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 31,
@@ -3755,7 +4127,19 @@
    "distance_to_target": 9,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 32,
@@ -3856,7 +4240,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 33,
@@ -3957,7 +4353,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 34,
@@ -4058,7 +4466,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 35,
@@ -4159,7 +4579,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 36,
@@ -4260,7 +4692,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 37,
@@ -4361,7 +4805,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 38,
@@ -4464,7 +4920,19 @@
    "distance_to_target": 11,
    "events": [
     "collision_obstacle"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 39,
@@ -4567,7 +5035,19 @@
    "distance_to_target": 11,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 40,
@@ -4668,7 +5148,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 41,
@@ -4769,7 +5261,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 42,
@@ -4870,7 +5374,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 43,
@@ -4971,7 +5487,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 44,
@@ -5072,7 +5600,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 45,
@@ -5173,7 +5713,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 46,
@@ -5274,7 +5826,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 47,
@@ -5375,7 +5939,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 48,
@@ -5476,7 +6052,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 49,
@@ -5577,7 +6165,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 50,
@@ -5678,7 +6278,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 51,
@@ -5779,7 +6391,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 52,
@@ -5880,7 +6504,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 53,
@@ -5981,7 +6617,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 54,
@@ -6084,7 +6732,19 @@
    "distance_to_target": 11,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 55,
@@ -6185,7 +6845,19 @@
     }
    ],
    "distance_to_target": 12,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 56,
@@ -6288,7 +6960,19 @@
    "distance_to_target": 12,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 57,
@@ -6389,7 +7073,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 58,
@@ -6490,7 +7186,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 59,
@@ -6591,7 +7299,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 60,
@@ -6692,7 +7412,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 61,
@@ -6793,7 +7525,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 62,
@@ -6894,7 +7638,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 63,
@@ -6995,7 +7751,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 64,
@@ -7096,7 +7864,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 65,
@@ -7197,7 +7977,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 66,
@@ -7298,7 +8090,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 67,
@@ -7399,7 +8203,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 68,
@@ -7502,7 +8318,19 @@
    "distance_to_target": 10,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 69,
@@ -7603,7 +8431,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 70,
@@ -7706,7 +8546,19 @@
    "distance_to_target": 10,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 71,
@@ -7809,7 +8661,19 @@
    "distance_to_target": 10,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 72,
@@ -7910,7 +8774,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 73,
@@ -8013,7 +8889,19 @@
    "distance_to_target": 11,
    "events": [
     "collision_obstacle"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 74,
@@ -8114,7 +9002,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 75,
@@ -8215,7 +9115,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 76,
@@ -8316,7 +9228,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 77,
@@ -8417,7 +9341,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 78,
@@ -8518,7 +9454,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 79,
@@ -8621,7 +9569,19 @@
    "distance_to_target": 9,
    "events": [
     "collision_obstacle"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 80,
@@ -8722,7 +9682,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 81,
@@ -8823,7 +9795,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 82,
@@ -8924,7 +9908,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 83,
@@ -9025,7 +10021,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 84,
@@ -9128,7 +10136,19 @@
    "distance_to_target": 9,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 85,
@@ -9229,7 +10249,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 86,
@@ -9330,7 +10362,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 87,
@@ -9431,7 +10475,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 88,
@@ -9532,7 +10588,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 89,
@@ -9633,7 +10701,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 90,
@@ -9734,7 +10814,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 91,
@@ -9835,7 +10927,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 92,
@@ -9936,7 +11040,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 93,
@@ -10037,7 +11153,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 94,
@@ -10138,7 +11266,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 95,
@@ -10239,7 +11379,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 96,
@@ -10340,7 +11492,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 97,
@@ -10441,7 +11605,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 98,
@@ -10542,7 +11718,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 99,
@@ -10643,7 +11831,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 100,
@@ -10744,7 +11944,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 101,
@@ -10845,7 +12057,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 102,
@@ -10946,7 +12170,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 103,
@@ -11047,7 +12283,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 104,
@@ -11148,7 +12396,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 105,
@@ -11249,7 +12509,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 106,
@@ -11350,7 +12622,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 107,
@@ -11451,7 +12735,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 108,
@@ -11552,7 +12848,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 109,
@@ -11653,7 +12961,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 110,
@@ -11754,7 +13074,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 111,
@@ -11855,7 +13187,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 112,
@@ -11958,7 +13302,19 @@
    "distance_to_target": 11,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 113,
@@ -12061,7 +13417,19 @@
    "distance_to_target": 11,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 114,
@@ -12164,7 +13532,19 @@
    "distance_to_target": 11,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 115,
@@ -12265,7 +13645,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 116,
@@ -12366,7 +13758,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 117,
@@ -12467,7 +13871,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 118,
@@ -12568,7 +13984,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 119,
@@ -12671,7 +14099,19 @@
    "distance_to_target": 8,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 120,
@@ -12772,7 +14212,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 121,
@@ -12873,7 +14325,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 122,
@@ -12974,7 +14438,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 123,
@@ -13075,7 +14551,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 124,
@@ -13176,7 +14664,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 125,
@@ -13277,7 +14777,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 126,
@@ -13378,7 +14890,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 127,
@@ -13481,7 +15005,19 @@
    "distance_to_target": 9,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 128,
@@ -13582,7 +15118,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 129,
@@ -13685,7 +15233,19 @@
    "distance_to_target": 9,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 130,
@@ -13788,7 +15348,19 @@
    "distance_to_target": 9,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 131,
@@ -13889,7 +15461,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 132,
@@ -13990,7 +15574,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 133,
@@ -14091,7 +15687,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 134,
@@ -14192,7 +15800,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 135,
@@ -14295,7 +15915,19 @@
    "distance_to_target": 10,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 136,
@@ -14396,7 +16028,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 137,
@@ -14497,7 +16141,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 138,
@@ -14600,7 +16256,19 @@
    "distance_to_target": 9,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 139,
@@ -14701,7 +16369,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 140,
@@ -14804,7 +16484,19 @@
    "distance_to_target": 10,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 141,
@@ -14907,7 +16599,19 @@
    "distance_to_target": 10,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 142,
@@ -15008,7 +16712,19 @@
     }
    ],
    "distance_to_target": 11,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 143,
@@ -15109,7 +16825,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 144,
@@ -15210,7 +16938,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 145,
@@ -15311,7 +17051,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 146,
@@ -15412,7 +17164,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 147,
@@ -15513,7 +17277,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 148,
@@ -15616,7 +17392,19 @@
    "distance_to_target": 8,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 149,
@@ -15717,7 +17505,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 150,
@@ -15820,7 +17620,19 @@
    "distance_to_target": 9,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 151,
@@ -15921,7 +17733,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 152,
@@ -16022,7 +17846,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 153,
@@ -16123,7 +17959,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 154,
@@ -16224,7 +18072,19 @@
     }
    ],
    "distance_to_target": 10,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 155,
@@ -16325,7 +18185,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 156,
@@ -16426,7 +18298,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 157,
@@ -16527,7 +18411,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 158,
@@ -16628,7 +18524,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 159,
@@ -16729,7 +18637,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 160,
@@ -16832,7 +18752,19 @@
    "distance_to_target": 10,
    "events": [
     "charging"
-   ]
+   ],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 161,
@@ -16936,7 +18868,19 @@
    "events": [
     "collision_static",
     "charging"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 162,
@@ -17037,7 +18981,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 163,
@@ -17138,7 +19094,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 164,
@@ -17239,7 +19207,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 165,
@@ -17340,7 +19320,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 166,
@@ -17441,7 +19433,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 167,
@@ -17542,7 +19546,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 168,
@@ -17643,7 +19659,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 169,
@@ -17746,7 +19774,19 @@
    "distance_to_target": 8,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 170,
@@ -17847,7 +19887,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 171,
@@ -17948,7 +20000,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 172,
@@ -18049,7 +20113,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 173,
@@ -18150,7 +20226,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 174,
@@ -18251,7 +20339,19 @@
     }
    ],
    "distance_to_target": 9,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 175,
@@ -18352,7 +20452,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 176,
@@ -18453,7 +20565,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 177,
@@ -18554,7 +20678,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 178,
@@ -18655,7 +20791,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 179,
@@ -18756,7 +20904,19 @@
     }
    ],
    "distance_to_target": 8,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 180,
@@ -18857,7 +21017,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 181,
@@ -18958,7 +21130,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 182,
@@ -19061,7 +21245,19 @@
    "distance_to_target": 6,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 183,
@@ -19162,7 +21358,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 184,
@@ -19263,7 +21471,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 185,
@@ -19366,7 +21586,19 @@
    "distance_to_target": 6,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 186,
@@ -19467,7 +21699,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 187,
@@ -19568,7 +21812,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 188,
@@ -19669,7 +21925,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 189,
@@ -19770,7 +22038,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 190,
@@ -19873,7 +22153,19 @@
    "distance_to_target": 6,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 191,
@@ -19974,7 +22266,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 192,
@@ -20075,7 +22379,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 193,
@@ -20178,7 +22494,19 @@
    "distance_to_target": 6,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 194,
@@ -20279,7 +22607,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 195,
@@ -20380,7 +22720,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 196,
@@ -20481,7 +22833,19 @@
     }
    ],
    "distance_to_target": 7,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 197,
@@ -20582,7 +22946,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 198,
@@ -20685,7 +23061,19 @@
    "distance_to_target": 6,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 199,
@@ -20786,7 +23174,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 200,
@@ -20889,7 +23289,19 @@
    "distance_to_target": 6,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 201,
@@ -20990,7 +23402,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 202,
@@ -21091,7 +23515,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 203,
@@ -21192,7 +23628,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 204,
@@ -21293,7 +23741,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 205,
@@ -21394,7 +23854,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 206,
@@ -21495,7 +23967,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 207,
@@ -21598,7 +24082,19 @@
    "distance_to_target": 4,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 208,
@@ -21699,7 +24195,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 209,
@@ -21800,7 +24308,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 210,
@@ -21901,7 +24421,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 211,
@@ -22002,7 +24534,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 212,
@@ -22103,7 +24647,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 213,
@@ -22204,7 +24760,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 214,
@@ -22305,7 +24873,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 215,
@@ -22406,7 +24986,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 216,
@@ -22507,7 +25099,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 217,
@@ -22608,7 +25212,19 @@
     }
    ],
    "distance_to_target": 2,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 218,
@@ -22711,7 +25327,19 @@
    "distance_to_target": 2,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 219,
@@ -22812,7 +25440,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 220,
@@ -22913,7 +25553,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 221,
@@ -23014,7 +25666,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 222,
@@ -23115,7 +25779,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 223,
@@ -23216,7 +25892,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 224,
@@ -23317,7 +26005,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 225,
@@ -23418,7 +26118,19 @@
     }
    ],
    "distance_to_target": 2,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 226,
@@ -23519,7 +26231,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 227,
@@ -23620,7 +26344,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 228,
@@ -23723,7 +26459,19 @@
    "distance_to_target": 4,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 229,
@@ -23826,7 +26574,19 @@
    "distance_to_target": 4,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 230,
@@ -23929,7 +26689,19 @@
    "distance_to_target": 4,
    "events": [
     "collision_obstacle"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 231,
@@ -24032,7 +26804,19 @@
    "distance_to_target": 4,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 232,
@@ -24135,7 +26919,19 @@
    "distance_to_target": 4,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 233,
@@ -24236,7 +27032,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 234,
@@ -24337,7 +27145,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 235,
@@ -24440,7 +27260,19 @@
    "distance_to_target": 4,
    "events": [
     "collision_obstacle"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 236,
@@ -24541,7 +27373,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 237,
@@ -24644,7 +27488,19 @@
    "distance_to_target": 5,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 238,
@@ -24745,7 +27601,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 239,
@@ -24846,7 +27714,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 240,
@@ -24949,7 +27829,19 @@
    "distance_to_target": 5,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 241,
@@ -25050,7 +27942,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 242,
@@ -25151,7 +28055,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 243,
@@ -25252,7 +28168,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 244,
@@ -25353,7 +28281,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 245,
@@ -25454,7 +28394,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 246,
@@ -25555,7 +28507,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 247,
@@ -25656,7 +28620,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 248,
@@ -25757,7 +28733,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 249,
@@ -25860,7 +28848,19 @@
    "distance_to_target": 5,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 250,
@@ -25963,7 +28963,19 @@
    "distance_to_target": 5,
    "events": [
     "collision_obstacle"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 251,
@@ -26064,7 +29076,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 252,
@@ -26165,7 +29189,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 253,
@@ -26266,7 +29302,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 254,
@@ -26369,7 +29417,19 @@
    "distance_to_target": 6,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 255,
@@ -26470,7 +29530,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 256,
@@ -26571,7 +29643,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 257,
@@ -26672,7 +29756,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 258,
@@ -26775,7 +29871,19 @@
    "distance_to_target": 5,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 259,
@@ -26876,7 +29984,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 260,
@@ -26977,7 +30097,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 261,
@@ -27080,7 +30212,19 @@
    "distance_to_target": 5,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 262,
@@ -27181,7 +30325,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 263,
@@ -27282,7 +30438,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 264,
@@ -27383,7 +30551,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 265,
@@ -27484,7 +30664,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 266,
@@ -27587,7 +30779,19 @@
    "distance_to_target": 5,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 267,
@@ -27688,7 +30892,19 @@
     }
    ],
    "distance_to_target": 6,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 268,
@@ -27789,7 +31005,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 269,
@@ -27890,7 +31118,19 @@
     }
    ],
    "distance_to_target": 5,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 270,
@@ -27991,7 +31231,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 271,
@@ -28092,7 +31344,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 272,
@@ -28195,7 +31459,19 @@
    "distance_to_target": 3,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 273,
@@ -28298,7 +31574,19 @@
    "distance_to_target": 3,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 274,
@@ -28399,7 +31687,19 @@
     }
    ],
    "distance_to_target": 2,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 275,
@@ -28500,7 +31800,19 @@
     }
    ],
    "distance_to_target": 2,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 276,
@@ -28601,7 +31913,19 @@
     }
    ],
    "distance_to_target": 1,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 277,
@@ -28702,7 +32026,19 @@
     }
    ],
    "distance_to_target": 2,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 278,
@@ -28803,7 +32139,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 279,
@@ -28904,7 +32252,19 @@
     }
    ],
    "distance_to_target": 4,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 280,
@@ -29007,7 +32367,19 @@
    "distance_to_target": 4,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 281,
@@ -29108,7 +32480,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 282,
@@ -29211,7 +32595,19 @@
    "distance_to_target": 3,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 283,
@@ -29312,7 +32708,19 @@
     }
    ],
    "distance_to_target": 2,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 284,
@@ -29415,7 +32823,19 @@
    "distance_to_target": 2,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 285,
@@ -29516,7 +32936,19 @@
     }
    ],
    "distance_to_target": 2,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 286,
@@ -29619,7 +33051,19 @@
    "distance_to_target": 2,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 287,
@@ -29720,7 +33164,19 @@
     }
    ],
    "distance_to_target": 1,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 288,
@@ -29821,7 +33277,19 @@
     }
    ],
    "distance_to_target": 2,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 289,
@@ -29924,7 +33392,19 @@
    "distance_to_target": 2,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 290,
@@ -30027,7 +33507,19 @@
    "distance_to_target": 2,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 291,
@@ -30130,7 +33622,19 @@
    "distance_to_target": 2,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 292,
@@ -30231,7 +33735,19 @@
     }
    ],
    "distance_to_target": 1,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 293,
@@ -30332,7 +33848,19 @@
     }
    ],
    "distance_to_target": 1,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 294,
@@ -30433,7 +33961,19 @@
     }
    ],
    "distance_to_target": 2,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 295,
@@ -30534,7 +34074,19 @@
     }
    ],
    "distance_to_target": 3,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 296,
@@ -30635,7 +34187,19 @@
     }
    ],
    "distance_to_target": 2,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 297,
@@ -30736,7 +34300,19 @@
     }
    ],
    "distance_to_target": 1,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 298,
@@ -30837,7 +34413,19 @@
     }
    ],
    "distance_to_target": 1,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 299,
@@ -30940,7 +34528,19 @@
    "distance_to_target": 21,
    "events": [
     "pickup"
-   ]
+   ],
+   "reward": 4.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 5.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 300,
@@ -31041,7 +34641,19 @@
     }
    ],
    "distance_to_target": 21,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 301,
@@ -31142,7 +34754,19 @@
     }
    ],
    "distance_to_target": 21,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 302,
@@ -31245,7 +34869,19 @@
    "distance_to_target": 21,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 303,
@@ -31346,7 +34982,19 @@
     }
    ],
    "distance_to_target": 21,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 304,
@@ -31447,7 +35095,19 @@
     }
    ],
    "distance_to_target": 22,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 305,
@@ -31548,7 +35208,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 306,
@@ -31651,7 +35323,19 @@
    "distance_to_target": 23,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 307,
@@ -31752,7 +35436,19 @@
     }
    ],
    "distance_to_target": 22,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 308,
@@ -31853,7 +35549,19 @@
     }
    ],
    "distance_to_target": 21,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 309,
@@ -31954,7 +35662,19 @@
     }
    ],
    "distance_to_target": 22,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 310,
@@ -32055,7 +35775,19 @@
     }
    ],
    "distance_to_target": 21,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 311,
@@ -32156,7 +35888,19 @@
     }
    ],
    "distance_to_target": 20,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 312,
@@ -32257,7 +36001,19 @@
     }
    ],
    "distance_to_target": 20,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 313,
@@ -32358,7 +36114,19 @@
     }
    ],
    "distance_to_target": 21,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 314,
@@ -32461,7 +36229,19 @@
    "distance_to_target": 21,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 315,
@@ -32562,7 +36342,19 @@
     }
    ],
    "distance_to_target": 22,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 316,
@@ -32663,7 +36455,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 317,
@@ -32766,7 +36570,19 @@
    "distance_to_target": 23,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 318,
@@ -32867,7 +36683,19 @@
     }
    ],
    "distance_to_target": 24,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 319,
@@ -32968,7 +36796,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 320,
@@ -33069,7 +36909,19 @@
     }
    ],
    "distance_to_target": 24,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 321,
@@ -33170,7 +37022,19 @@
     }
    ],
    "distance_to_target": 24,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 322,
@@ -33273,7 +37137,19 @@
    "distance_to_target": 24,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 323,
@@ -33374,7 +37250,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 324,
@@ -33475,7 +37363,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 325,
@@ -33576,7 +37476,19 @@
     }
    ],
    "distance_to_target": 22,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 326,
@@ -33677,7 +37589,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 327,
@@ -33780,7 +37704,19 @@
    "distance_to_target": 23,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 328,
@@ -33881,7 +37817,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 329,
@@ -33982,7 +37930,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 330,
@@ -34083,7 +38043,19 @@
     }
    ],
    "distance_to_target": 24,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 331,
@@ -34184,7 +38156,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 332,
@@ -34287,7 +38271,19 @@
    "distance_to_target": 23,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 333,
@@ -34388,7 +38384,19 @@
     }
    ],
    "distance_to_target": 24,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 334,
@@ -34489,7 +38497,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 335,
@@ -34590,7 +38610,19 @@
     }
    ],
    "distance_to_target": 24,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 336,
@@ -34693,7 +38725,19 @@
    "distance_to_target": 24,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 337,
@@ -34794,7 +38838,19 @@
     }
    ],
    "distance_to_target": 25,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 338,
@@ -34895,7 +38951,19 @@
     }
    ],
    "distance_to_target": 24,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 339,
@@ -34998,7 +39066,19 @@
    "distance_to_target": 24,
    "events": [
     "collision_obstacle"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 340,
@@ -35099,7 +39179,19 @@
     }
    ],
    "distance_to_target": 24,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 341,
@@ -35200,7 +39292,19 @@
     }
    ],
    "distance_to_target": 24,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 342,
@@ -35303,7 +39407,19 @@
    "distance_to_target": 24,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 343,
@@ -35406,7 +39522,19 @@
    "distance_to_target": 24,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 344,
@@ -35507,7 +39635,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 345,
@@ -35608,7 +39748,19 @@
     }
    ],
    "distance_to_target": 24,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 346,
@@ -35709,7 +39861,19 @@
     }
    ],
    "distance_to_target": 23,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 347,
@@ -35810,7 +39974,19 @@
     }
    ],
    "distance_to_target": 22,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 348,
@@ -35911,7 +40087,19 @@
     }
    ],
    "distance_to_target": 21,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 349,
@@ -36012,7 +40200,19 @@
     }
    ],
    "distance_to_target": 22,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 350,
@@ -36113,7 +40313,19 @@
     }
    ],
    "distance_to_target": 22,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 351,
@@ -36214,7 +40426,19 @@
     }
    ],
    "distance_to_target": 21,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 352,
@@ -36317,7 +40541,19 @@
    "distance_to_target": 21,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 353,
@@ -36420,7 +40656,19 @@
    "distance_to_target": 21,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 354,
@@ -36521,7 +40769,19 @@
     }
    ],
    "distance_to_target": 20,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 355,
@@ -36624,7 +40884,19 @@
    "distance_to_target": 20,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 356,
@@ -36725,7 +40997,19 @@
     }
    ],
    "distance_to_target": 19,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 357,
@@ -36826,7 +41110,19 @@
     }
    ],
    "distance_to_target": 18,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 358,
@@ -36929,7 +41225,19 @@
    "distance_to_target": 18,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 359,
@@ -37030,7 +41338,19 @@
     }
    ],
    "distance_to_target": 17,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 360,
@@ -37133,7 +41453,19 @@
    "distance_to_target": 17,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 361,
@@ -37236,7 +41568,19 @@
    "distance_to_target": 17,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 362,
@@ -37339,7 +41683,19 @@
    "distance_to_target": 17,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 363,
@@ -37440,7 +41796,19 @@
     }
    ],
    "distance_to_target": 18,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 364,
@@ -37541,7 +41909,19 @@
     }
    ],
    "distance_to_target": 18,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 365,
@@ -37642,7 +42022,19 @@
     }
    ],
    "distance_to_target": 17,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 366,
@@ -37743,7 +42135,19 @@
     }
    ],
    "distance_to_target": 18,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 367,
@@ -37844,7 +42248,19 @@
     }
    ],
    "distance_to_target": 18,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 368,
@@ -37945,7 +42361,19 @@
     }
    ],
    "distance_to_target": 17,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 369,
@@ -38046,7 +42474,19 @@
     }
    ],
    "distance_to_target": 16,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 370,
@@ -38147,7 +42587,19 @@
     }
    ],
    "distance_to_target": 17,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 371,
@@ -38250,7 +42702,19 @@
    "distance_to_target": 17,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 372,
@@ -38353,7 +42817,19 @@
    "distance_to_target": 17,
    "events": [
     "collision_static"
-   ]
+   ],
+   "reward": -1.051,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": -1.0,
+    "wait": 0.0,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 373,
@@ -38454,7 +42930,19 @@
     }
    ],
    "distance_to_target": 18,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 374,
@@ -38555,7 +43043,19 @@
     }
    ],
    "distance_to_target": 18,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 375,
@@ -38656,7 +43156,19 @@
     }
    ],
    "distance_to_target": 17,
-   "events": []
+   "events": [],
+   "reward": 0.94,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 376,
@@ -38757,7 +43269,19 @@
     }
    ],
    "distance_to_target": 18,
-   "events": []
+   "events": [],
+   "reward": -1.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": -1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 377,
@@ -38858,7 +43382,19 @@
     }
    ],
    "distance_to_target": 18,
-   "events": []
+   "events": [],
+   "reward": -0.151,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 0.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": -0.1,
+    "energy": -0.001,
+    "battery_depleted": 0.0,
+    "timeout": 0.0
+   }
   },
   {
    "step": 378,
@@ -38961,7 +43497,19 @@
    "distance_to_target": 17,
    "events": [
     "battery_depleted"
-   ]
+   ],
+   "reward": -9.06,
+   "reward_components": {
+    "step_penalty": -0.05,
+    "progress": 1.0,
+    "pickup": 0.0,
+    "delivery": 0.0,
+    "collision": 0.0,
+    "wait": 0.0,
+    "energy": -0.01,
+    "battery_depleted": -10.0,
+    "timeout": 0.0
+   }
   }
  ],
  "summary": {

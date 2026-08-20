@@ -1,6 +1,6 @@
 # Evaluation: battery_constrained
 
-- Generated: 2026-08-20T11:58:07+00:00
+- Generated: 2026-08-20T12:31:34+00:00
 - Episodes per controller: 30 (seeds 1000-1029)
 
 | Controller | Episodes | Success rate | Steps | Path length | Path efficiency | Collisions | Energy % | Charging events | Reward |

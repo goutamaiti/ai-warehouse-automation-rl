@@ -43,7 +43,13 @@ VITE_API_BASE = https://your-backend-host
 ```
 
 Redeploy. The dashboard will detect the backend, show "Backend connected" and
-enable the "Run a new episode" form. On the backend set:
+enable the "Run a new episode" form on the Dashboard tab plus the full Editor
+tab: PPO, moving obstacles, and running a hand-drawn warehouse through the
+real Python simulation (`POST /api/run` accepts an optional `layout` grid that
+overrides the named scenario's own map). Without a backend, the Editor still
+works for A*, BFS and Random through an in-browser sandbox - see
+`frontend/src/lib/offlineSimulation.js` - but PPO and moving obstacles are
+disabled there. On the backend set:
 
 ```text
 ALLOWED_ORIGINS = https://your-dashboard.vercel.app

@@ -7,6 +7,7 @@ rendering switched off and still behave identically.
 
 from __future__ import annotations
 
+import dataclasses
 import json
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -69,6 +70,7 @@ class EpisodeRecorder:
     scenario: str
     seed: int
     layout: dict[str, Any]
+    reward_config: dict[str, Any] = field(default_factory=dict)
     frames: list[dict] = field(default_factory=list)
     summary: dict[str, Any] = field(default_factory=dict)
 
@@ -81,10 +83,35 @@ class EpisodeRecorder:
             scenario=sim.config.name,
             seed=seed,
             layout=sim.layout.to_dict(),
+            # The exact weights that produced every reward number in this
+            # recording, so a viewer (dashboard, report) never has to guess or
+            # duplicate them from a config file.
+            reward_config=dataclasses.asdict(sim.config.reward),
         )
 
-    def capture(self, sim: WarehouseSimulation, events: list[str] | None = None) -> None:
-        self.frames.append(sim.snapshot(events))
+    def capture(
+        self,
+        sim: WarehouseSimulation,
+        events: list[str] | None = None,
+        reward: float | None = None,
+        reward_components: dict[str, float] | None = None,
+    ) -> None:
+        """Append one frame.
+
+        ``reward``/``reward_components`` are the values the environment
+        computed for the step that produced this frame - the same numbers
+        shown in the dashboard's reward panel. The very first frame (the
+        state right after reset) carries neither, since no action has
+        happened yet.
+        """
+        frame = sim.snapshot(events)
+        if reward is not None:
+            frame["reward"] = round(float(reward), 4)
+        if reward_components is not None:
+            frame["reward_components"] = {
+                key: round(float(value), 4) for key, value in reward_components.items()
+            }
+        self.frames.append(frame)
 
     def finalise(self, sim: WarehouseSimulation, extra: dict | None = None) -> None:
         self.summary = {
@@ -101,6 +128,7 @@ class EpisodeRecorder:
             "scenario": self.scenario,
             "seed": self.seed,
             "layout": self.layout,
+            "reward_config": self.reward_config,
             "frames": self.frames,
             "summary": self.summary,
         }

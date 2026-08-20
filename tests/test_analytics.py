@@ -98,3 +98,16 @@ def test_recorder_file_contains_layout_and_frames(tmp_path):
     assert data["layout"]["grid"]
     assert data["frames"][0]["robot"]["battery"] > 0
     assert data["summary"]["controller"] == "astar"
+
+
+def test_recorded_frames_carry_reward_and_the_weights_that_produced_it():
+    env = make_env("default")
+    _metrics, recorder = run_episode(env, PlannerPolicy(), seed=3, record=True)
+    assert "reward" not in recorder.frames[0]
+    assert recorder.frames[1]["reward"] is not None
+    assert set(recorder.frames[1]["reward_components"]) >= {
+        "step_penalty", "progress", "pickup", "delivery", "collision",
+        "wait", "energy", "battery_depleted", "timeout",
+    }
+    assert recorder.reward_config["delivery_reward"] == 20.0
+    assert recorder.to_dict()["reward_config"] == recorder.reward_config

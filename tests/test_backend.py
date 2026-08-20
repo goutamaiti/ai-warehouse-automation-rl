@@ -75,3 +75,54 @@ def test_ppo_model_lookup_prefers_the_scenario_specific_policy():
     if path is None:
         pytest.skip("no trained models present in this checkout")
     assert path.name in {"ppo_dynamic.zip", "ppo_default.zip"}
+
+
+def _tiny_custom_grid():
+    # 0 empty, 1 wall, 2 shelf, 3 storage, 4 packing, 5 charging
+    return [
+        [1, 1, 1, 1, 1, 1, 1],
+        [1, 0, 0, 0, 0, 0, 1],
+        [1, 0, 2, 3, 0, 0, 1],
+        [1, 4, 0, 0, 0, 5, 1],
+        [1, 1, 1, 1, 1, 1, 1],
+    ]
+
+
+def test_run_accepts_a_custom_layout():
+    response = client.post(
+        "/api/run",
+        json={"scenario": "default", "controller": "astar", "seed": 0, "layout": _tiny_custom_grid()},
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["layout"]["width"] == 7 and payload["layout"]["height"] == 5
+    assert payload["summary"]["tasks_delivered"] == 1
+
+
+def test_run_rejects_an_invalid_custom_layout():
+    grid = _tiny_custom_grid()
+    grid[2][3] = 0  # remove the only storage point
+    response = client.post(
+        "/api/run",
+        json={"scenario": "default", "controller": "astar", "seed": 0, "layout": grid},
+    )
+    assert response.status_code == 404
+    assert "invalid layout" in response.json()["detail"]
+
+
+def test_run_rejects_an_oversized_custom_layout():
+    huge_row = [0] * 60
+    response = client.post(
+        "/api/run",
+        json={"scenario": "default", "controller": "astar", "seed": 0, "layout": [huge_row] * 60},
+    )
+    assert response.status_code == 422
+
+
+def test_run_replay_carries_reward_breakdown_per_frame():
+    response = client.post("/api/run", json={"scenario": "default", "controller": "astar", "seed": 5})
+    payload = response.json()
+    assert payload["reward_config"]["delivery_reward"] == 20.0
+    assert "reward" not in payload["frames"][0]  # initial state, nothing happened yet
+    assert payload["frames"][1]["reward"] is not None
+    assert "reward_components" in payload["frames"][1]

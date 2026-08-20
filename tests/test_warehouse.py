@@ -102,3 +102,82 @@ def test_layout_serialises_to_json_friendly_types():
     assert payload["height"] and payload["width"]
     assert isinstance(payload["grid"][0][0], int)
     assert payload["legend"]["charging"] == int(CellType.CHARGING)
+
+
+# --- layout_from_grid: user-drawn warehouses (dashboard editor) -----------
+
+from simulation.warehouse import layout_from_grid
+
+
+def _small_valid_grid() -> list[list[int]]:
+    # 7x9, border walls, one shelf, one storage cell facing it, one packing
+    # station and one charging station, all mutually reachable.
+    W, K = int(CellType.WALL), int(CellType.EMPTY)
+    S, T, P, C = int(CellType.SHELF), int(CellType.STORAGE), int(CellType.PACKING), int(CellType.CHARGING)
+    grid = [
+        [W, W, W, W, W, W, W, W, W],
+        [W, K, K, K, K, K, K, K, W],
+        [W, K, S, S, K, K, K, K, W],
+        [W, K, T, K, K, K, K, K, W],
+        [W, K, K, K, K, K, K, K, W],
+        [W, P, K, K, K, K, K, C, W],
+        [W, W, W, W, W, W, W, W, W],
+    ]
+    return grid
+
+
+def test_layout_from_grid_accepts_a_valid_hand_drawn_warehouse():
+    layout = layout_from_grid(_small_valid_grid())
+    assert layout.storage_points == ((3, 2),)
+    assert layout.packing_stations == ((5, 1),)
+    assert layout.charging_stations == ((5, 7),)
+
+
+def test_layout_from_grid_rejects_unknown_cell_values():
+    grid = _small_valid_grid()
+    grid[1][1] = 99
+    with pytest.raises(ValueError, match="unknown cell values"):
+        layout_from_grid(grid)
+
+
+def test_layout_from_grid_rejects_ragged_rows():
+    grid = _small_valid_grid()
+    grid[2] = grid[2][:-1]
+    with pytest.raises(ValueError):
+        layout_from_grid(grid)
+
+
+@pytest.mark.parametrize(
+    "remove_type,message",
+    [
+        (int(CellType.STORAGE), "storage point"),
+        (int(CellType.PACKING), "packing station"),
+        (int(CellType.CHARGING), "charging station"),
+    ],
+)
+def test_layout_from_grid_requires_every_point_type(remove_type, message):
+    grid = _small_valid_grid()
+    grid = [[int(CellType.EMPTY) if cell == remove_type else cell for cell in row] for row in grid]
+    with pytest.raises(ValueError, match=message):
+        layout_from_grid(grid)
+
+
+def test_layout_from_grid_rejects_an_unreachable_station():
+    grid = _small_valid_grid()
+    # Wall off the charging station on all four sides.
+    for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+        grid[5 + dr][7 + dc] = int(CellType.WALL)
+    with pytest.raises(ValueError, match="unreachable"):
+        layout_from_grid(grid)
+
+
+def test_layout_from_grid_rejects_too_small_a_grid():
+    with pytest.raises(ValueError):
+        layout_from_grid([[0] * 4] * 4)
+
+
+def test_layout_from_grid_rejects_an_oversized_grid():
+    from simulation.warehouse import MAX_CUSTOM_SIZE
+
+    with pytest.raises(ValueError):
+        layout_from_grid([[0] * (MAX_CUSTOM_SIZE + 1)] * (MAX_CUSTOM_SIZE + 1))
