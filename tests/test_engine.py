@@ -55,6 +55,32 @@ def test_move_into_wall_is_a_collision_and_does_not_move_the_robot():
     assert sim.counters.static_collisions == 1
 
 
+def test_move_into_a_shelf_is_a_collision_and_does_not_move_the_robot():
+    """Shelves are a static obstacle exactly like walls: is_walkable is False,
+    so the engine blocks the move for every controller, not just the ones
+    smart enough to plan around it."""
+    sim = make_sim(max_steps=2000)
+    drive_to(sim, sim.layout.storage_points[0])  # every storage point touches a shelf
+    row, col = sim.robot.position
+    directions = {
+        Action.UP: (row - 1, col),
+        Action.DOWN: (row + 1, col),
+        Action.LEFT: (row, col - 1),
+        Action.RIGHT: (row, col + 1),
+    }
+    shelf_action, shelf_cell = next(
+        (a, cell) for a, cell in directions.items() if sim.layout.cell(cell) is CellType.SHELF
+    )
+
+    outcome = sim.step(shelf_action)
+    assert outcome.blocked_by_static
+    assert outcome.collided
+    assert not outcome.moved
+    assert sim.robot.position == (row, col)
+    assert sim.robot.position != shelf_cell
+    assert not sim.layout.is_walkable(shelf_cell)
+
+
 def test_wait_costs_idle_energy_only():
     sim = make_sim()
     battery_before = sim.robot.battery

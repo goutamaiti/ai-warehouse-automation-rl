@@ -181,3 +181,37 @@ def test_layout_from_grid_rejects_an_oversized_grid():
 
     with pytest.raises(ValueError):
         layout_from_grid([[0] * (MAX_CUSTOM_SIZE + 1)] * (MAX_CUSTOM_SIZE + 1))
+
+
+def test_shelf_forces_a_detour_in_a_custom_hand_drawn_layout():
+    """End-to-end proof that a user-painted shelf blocks the robot: A* must
+    route around it and the driven path never lands on a shelf cell. Mirrors
+    the equivalent check in frontend/src/lib/grid.js so both implementations
+    agree on the same guarantee.
+    """
+    from baselines.astar import astar
+    from simulation.engine import Action, WarehouseSimulation
+    from simulation.config import ScenarioConfig
+
+    W, K = int(CellType.WALL), int(CellType.EMPTY)
+    S, T, P, C = int(CellType.SHELF), int(CellType.STORAGE), int(CellType.PACKING), int(CellType.CHARGING)
+    grid = [
+        [W, W, W, W, W, W, W],
+        [W, C, K, S, K, T, W],
+        [W, K, K, S, K, K, W],
+        [W, K, K, K, K, K, W],
+        [W, P, K, K, K, K, W],
+        [W, W, W, W, W, W, W],
+    ]
+    layout = layout_from_grid(grid)
+
+    plan = astar(~layout.walkable_mask(), (1, 1), (1, 5))
+    assert plan.found
+    assert all(layout.cell(cell) is not CellType.SHELF for cell in plan.path)
+
+    sim = WarehouseSimulation(ScenarioConfig(max_steps=200), layout=layout)
+    outcome = sim.step(Action.RIGHT)  # straight into the shelf at (1, 3)... via (1,2) first
+    assert sim.robot.position == (1, 2)  # one free cell before the shelf
+    outcome = sim.step(Action.RIGHT)
+    assert outcome.blocked_by_static
+    assert sim.robot.position == (1, 2)
